@@ -1,4 +1,4 @@
-package com.xv435.LegendOfZ.game;
+package com.xv435.SeventhDeath.game;
 
 import java.lang.String;
 import java.util.Random;

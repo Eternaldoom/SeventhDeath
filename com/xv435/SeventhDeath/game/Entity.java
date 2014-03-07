@@ -1,4 +1,4 @@
-package com.xv435.LegendOfZ.game;
+package com.xv435.SeventhDeath.game;
 
 public class Entity {
 	public int x;

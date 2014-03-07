@@ -1,6 +1,6 @@
-package com.xv435.LegendOfZ.game.Entities;
+package com.xv435.SeventhDeath.game.Entities;
 
-import com.xv435.LegendOfZ.game.Character;
+import com.xv435.SeventhDeath.game.Character;
 
 public class Player extends Character {
     public Player() {
