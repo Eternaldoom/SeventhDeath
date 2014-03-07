@@ -5,7 +5,6 @@ package com.xv435.SeventhDeath.game;
 import java.io.IOException;
 
 import org.lwjgl.LWJGLException;
-import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
@@ -14,19 +13,16 @@ import com.xv435.SeventhDeath.game.Entities.Player;
 
 public class Game {
 	private Player player;
-	private int x;
-	private int y;
 
-	
     public Game() {
     	
     }
     public void start(int width, int height) throws IOException {
 		try {
 			Display.setDisplayMode(new DisplayMode(width,height));
-			Display.setTitle("Legend Of Z");
+			Display.setTitle("Seventh Death");
 			Display.create();
-			Display.setVSyncEnabled(true);
+			
 		} catch (LWJGLException e) {
 			System.out.println("[It crashed! We're all doomed!]");
 			e.printStackTrace();
@@ -36,10 +32,11 @@ public class Game {
 		GL11.glDisable(GL11.GL_DEPTH_TEST);
 		GL11.glEnable(GL11.GL_TEXTURE_2D);    
 		GL11.glEnable(GL11.GL_BLEND);
-		
+		GL11.glMatrixMode(GL11.GL_PROJECTION);
+		GL11.glLoadIdentity();
+		GL11.glOrtho(0, 640, 480, 0, 1, -1);
+		GL11.glMatrixMode(GL11.GL_MODELVIEW);
 
-		x = 50;
-		y = 50;
 		
 		
 		while (!Display.isCloseRequested()) {
@@ -53,25 +50,14 @@ public class Game {
 			
 			Display.update();
 
-			Display.sync(180);
+			Display.sync(60);
 		}
 		
 		Display.destroy();
     }
     
     public void inputEvents() {
-		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) == true) {
-			x = x - 3;
-		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) == true) {
-			x = x + 3;
-		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_UP) == true) {
-			y = y - 3;
-		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_DOWN) == true) {
-			y = y + 3;
-		}
+
 
     }
     public void events() {
