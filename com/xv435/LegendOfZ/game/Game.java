@@ -16,6 +16,7 @@ import org.newdawn.slick.util.ResourceLoader;
 import com.xv435.LegendOfZ.game.Entities.Player;
 
 public class Game {
+	@SuppressWarnings("unused")
 	private Player player;
 	private int x;
 	private int y;
@@ -62,16 +63,16 @@ public class Game {
     }
     
     public void keyBinds() {
-		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) == true) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_A) == true) {
 			x = x - 3;
 		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) == true) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_D) == true) {
 			x = x + 3;
 		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_UP) == true) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_W) == true) {
 			y = y - 3;
 		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_DOWN) == true) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_S) == true) {
 			y = y + 3;
 		}
 
