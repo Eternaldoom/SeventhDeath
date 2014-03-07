@@ -1,4 +1,4 @@
-package com.xv435.LegendOfZ.game;
+package com.xv435.SeventhDeath.game;
 
 import java.lang.String;
 import java.util.Random;
@@ -18,6 +18,7 @@ public class Character extends Entity
 
     public Character(int levelStart, int weaponPower, String inputName)
     {
+    	super(inputName + ".png");
         level = levelStart;
         weapon = new Weapon("Wooden Sword", 1);
         hp = level * 10;
