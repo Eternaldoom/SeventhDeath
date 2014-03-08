@@ -33,6 +33,7 @@ public class Player extends Character {
     	RenderX = constant.width / 2;
     	RenderY = constant.height / 2;
     }
+    
     public void render() {
     	GL11.glBegin(GL11.GL_QUADS);
     	GL11.glTexCoord2f(0,0);
