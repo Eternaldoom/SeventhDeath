@@ -20,8 +20,8 @@ public class Player extends Character {
 	 * These are for abstract location as other entities
 	 * and the map needs to render around the player.
 	 */
-	private int RenderX;
-	private int RenderY;
+	public int RenderX;
+	public int RenderY;
 	private Audio attackSound;
 	private Texture texture;
 	

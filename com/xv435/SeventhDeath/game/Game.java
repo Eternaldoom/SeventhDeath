@@ -71,16 +71,16 @@ public class Game {
     
     public void inputEvents() {
     	if (Keyboard.isKeyDown(Keyboard.KEY_D) == true) {
-    		player.x += 1;
+    		player.RenderX += 1;
     	}
     	if (Keyboard.isKeyDown(Keyboard.KEY_A) == true) {
-    		player.x -= 1;
+    		player.RenderX -= 1;
     	}
     	if (Keyboard.isKeyDown(Keyboard.KEY_W) == true) {
-    		player.y += 1;
+    		player.RenderY += 1;
     	}
     	if (Keyboard.isKeyDown(Keyboard.KEY_S) == true) {
-    		player.y -= 1;
+    		player.RenderY -= 1;
     	}
     	if (Keyboard.isKeyDown(Keyboard.KEY_SPACE) == true) {
     		player.attack();
