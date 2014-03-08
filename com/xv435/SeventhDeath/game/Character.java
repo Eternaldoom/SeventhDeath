@@ -3,7 +3,7 @@ package com.xv435.SeventhDeath.game;
 import java.lang.String;
 import java.util.Random;
 /**
- * This class is a class for the creation of characters in my attempt at creating an RPG Game.
+ * This class is a class for the creation of characters. I first created in my attempt at creating a console RPG Game.
  * 
  * @author (xv435) 
  * @version (Alpha 0.0.1)
@@ -16,11 +16,11 @@ public class Character extends Entity
     private int hp;
 
 
-    public Character(int levelStart, int weaponPower, String inputName)
+    public Character(int levelStart, int weaponPower, String weaponName, String inputName)
     {
     	super(inputName + ".png");
         level = levelStart;
-        weapon = new Weapon("Wooden Sword", 1);
+        weapon = new Weapon(weaponName, weaponPower);
         hp = level * 10;
         name = inputName;
     }

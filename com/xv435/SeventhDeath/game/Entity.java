@@ -8,8 +8,11 @@ import org.newdawn.slick.opengl.TextureLoader;
 import org.newdawn.slick.util.ResourceLoader;
 
 public class Entity {
+	
+
 	public int x;
 	public int y;
+	
 	public Texture texture;
 	public Entity(String textureName) {
 	    try {
@@ -24,13 +27,13 @@ public class Entity {
 
     	
     	GL11.glBegin(GL11.GL_QUADS);
-    	GL11.glTexCoord2f(0,0);
+    	GL11.glTexCoord2f(0.0F,0.0F);
     	GL11.glVertex2i(x,y);
-    	GL11.glTexCoord2f(1,0);
+    	GL11.glTexCoord2f(1.0F,0.0F);
     	GL11.glVertex2i(x+texture.getTextureWidth(),y);
-    	GL11.glTexCoord2f(1,1);
+    	GL11.glTexCoord2f(1.0F,1.0F);
     	GL11.glVertex2i(x+texture.getTextureWidth(),y+texture.getTextureHeight());
-    	GL11.glTexCoord2f(0,1);
+    	GL11.glTexCoord2f(0.0F,1.0F);
     	GL11.glVertex2i(x,y+texture.getTextureHeight());
     	GL11.glEnd();
 

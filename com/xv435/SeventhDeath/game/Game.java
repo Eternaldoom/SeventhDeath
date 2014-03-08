@@ -5,6 +5,7 @@ package com.xv435.SeventhDeath.game;
 import java.io.IOException;
 
 import org.lwjgl.LWJGLException;
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
@@ -57,7 +58,9 @@ public class Game {
     }
     
     public void inputEvents() {
-
+    	if (Keyboard.isKeyDown(Keyboard.KEY_SPACE) == true) {
+    		player.attack();
+    	}
 
     }
     public void events() {
