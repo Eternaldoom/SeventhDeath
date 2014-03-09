@@ -48,8 +48,6 @@ public class Game {
 			e.printStackTrace();
 		}
 
-    	mapTexture.bind();
-
 		
 		
 		while (!Display.isCloseRequested()) {
@@ -91,15 +89,18 @@ public class Game {
     	
     }
     public void renderBackground(int x, int y) {
+
+
+    	mapTexture.bind();
     	GL11.glBegin(GL11.GL_QUADS);
     	GL11.glTexCoord2f(player.x,player.y);
-    	GL11.glVertex2i(0, 600);
+    	GL11.glVertex2i(800, 600);
     	GL11.glTexCoord2f(1,0);
     	GL11.glVertex2i(0, 0);
     	GL11.glTexCoord2f(1,1);
     	GL11.glVertex2i(800, 0);
     	GL11.glTexCoord2f(0,1);
-    	GL11.glVertex2i(800, 600);
+    	GL11.glVertex2i(0, 600);
     	GL11.glEnd();
     }
     public void renderEntities() {

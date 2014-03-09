@@ -21,11 +21,11 @@ public class Entity {
 			e.printStackTrace();
 		}
 
-    	texture.bind();
+    	
 	}
 	public void render() {
 
-    	
+		texture.bind();
     	GL11.glBegin(GL11.GL_QUADS);
     	GL11.glTexCoord2f(0.0F,0.0F);
     	GL11.glVertex2i(x,y);
