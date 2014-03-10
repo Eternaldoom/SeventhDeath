@@ -38,6 +38,7 @@ public class Player extends Character {
     	RenderY = constant.height / 3;
     }
     
+    @Override
     public void render() {
     	texture.bind();
     	
@@ -49,7 +50,7 @@ public class Player extends Character {
     	GL11.glTexCoord2f(1,1);
     	GL11.glVertex2i(RenderX+texture.getTextureWidth(),RenderY+texture.getTextureHeight());
     	GL11.glTexCoord2f(0,1);
-    	GL11.glVertex2f(RenderX,RenderY+texture.getTextureHeight());
+    	GL11.glVertex2i(RenderX,RenderY+texture.getTextureHeight());
     	GL11.glEnd();
     }
     public void attack() {
